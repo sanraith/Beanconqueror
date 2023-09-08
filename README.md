@@ -1,6 +1,19 @@
 [![license](https://img.shields.io/badge/license-GPL%203.0-brightgreen.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Github All Releases](https://img.shields.io/github/downloads/graphefruit/beanconqueror/total.svg)](https://github.com/graphefruit/beanconqueror/releases) [![GitHub Release Date](https://img.shields.io/github/release-date/graphefruit/beanconqueror.svg)](https://github.com/graphefruit/beanconqueror/releases)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=graphefruit_Beanconqueror&metric=alert_status)](https://sonarcloud.io/dashboard?id=graphefruit_Beanconqueror)
 
+# MY BUILD NOTES
+
+Steps I took to get this to build on Win11:
+
+- add java to path (used openjdk 19.0.2)
+- add gradle to path (used 7.6.1)
+- install Android SDK Build Tools 30.0.3
+- remove anything health related to get rid of build errors (done in commit 799b53da)
+- `npm install`
+- `npm run generate`
+- run the build step at least twice `ionic cordova build android --verbose`
+- I don't think I needed at the end, but `npx cordova-check-plugins --update=auto --force` might also be useful
+
 # Beanconqueror
 
 Beanconqueror - The Ultimate Coffee Companion
